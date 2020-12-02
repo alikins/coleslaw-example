@@ -1,4 +1,7 @@
 {
+    "artifact_types": {
+        "collections": "collections/"
+    },
     "name": "index.json",
     "_node_type": "IndexJsonNode"
 }

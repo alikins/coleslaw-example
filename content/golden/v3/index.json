@@ -1,4 +1,11 @@
 {
+    "content_apis": {
+        "artifacts": "artifacts/",
+        "collections": "collections/"
+    },
+    "whatever_other_info_we_need": {
+        "can_go": "here"
+    },
     "name": "index.json",
     "_node_type": "IndexJsonNode"
 }

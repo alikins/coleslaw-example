@@ -1,4 +1,17 @@
 {
-    "name": "index.json",
-    "_node_type": "IndexJsonNode"
+    "meta": {
+        "count": 1
+    },
+    "links": {
+        "first": "example/index.json",
+        "last": "example/index.json",
+        "next": null,
+        "prev": null
+    },
+    "data": [
+        {
+            "name": "content",
+            "href": "example/content/"
+        }
+    ]
 }
