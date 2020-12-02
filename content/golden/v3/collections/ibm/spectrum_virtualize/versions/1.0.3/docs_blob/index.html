@@ -1,0 +1,2292 @@
+<!-- coleslaw start default-before-extends template "<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
+
+<!-- coleslaw start base template="<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- coleslaw start base-after-html template="<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
+<head>
+    
+    
+    <!-- coleslaw start template "<TemplateReference 'head_block.html.j2'>" -->
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/spacelab/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sIQOcNYer0kt7oTyFe/YrGzKMFP/qxsJbXTxq0/uiZQgpwXwEu41sVz2M61lWbai"
+        crossorigin="anonymous">
+<!-- Bootstrap-table -->
+<link href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css" rel="stylesheet">
+<!-- prism syntax highlighting -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism.css" rel="stylesheet" />
+<!-- coleslaw end template="<TemplateReference 'head_block.html.j2'>" -->
+    <title>docs_blob</title>
+    
+
+</head>
+<body>
+    <div id="content">
+
+    <!-- coleslaw start template="<TemplateReference 'navbar.html.j2'>"  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Coleslaw</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/alikins/coleslaw">About</a>
+      </li>
+    </ul>
+    <span class="badge badge-primary">Coleslaw</span>
+  </div>
+</nav>
+<!-- coleslaw end template="<TemplateReference 'navbar.html.j2'> -->
+    <!-- coleslaw start template="<TemplateReference 'breadcrumb.html.j2'>" -->
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+
+    <li class="breadcrumb-item"><a href="../../../../../../../../../index.html">home</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../../../../../index.html">content</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../../../../index.html">golden</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../../../index.html">v3</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../../index.html">collections</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../index.html">ibm</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../index.html">spectrum_virtualize</a></li>
+
+    <li class="breadcrumb-item"><a href="../../index.html">versions</a></li>
+
+    <li class="breadcrumb-item"><a href="../index.html">1.0.3</a></li>
+
+    <li class="breadcrumb-item"><a href="index.html">docs_blob</a></li>
+
+<li class="breadcrumb-item"><a href="index.html">index.html</a></li>
+</ol>
+</nav>
+<!-- coleslaw end template="<TemplateReference 'breadcrumb.html.j2'>" -->
+
+<div class="container">
+
+<pre>
+{'collection_readme': {'html': '<h1>Ansible Collection - '
+                               'ibm.spectrum_virtualize</h1>\n'
+                               '<p><a '
+                               'href="https://docs.ansible.com/ansible/latest/modules/list_of_cloud_modules.html#azure"><img '
+                               'alt="Doc" '
+                               'src="https://img.shields.io/badge/docs-latest-brightgreen.svg"></a>\n'
+                               '<a '
+                               'href="https://docs.ansible.com/ansible/latest/community/code_of_conduct.html"><img '
+                               'alt="Code of conduct" '
+                               'src="https://img.shields.io/badge/code%20of%20conduct-Ansible-silver.svg"></a>\n'
+                               '<a href="LICENSE"><img alt="License" '
+                               'src="https://img.shields.io/badge/license-GPL%20v3.0-brightgreen.svg"></a></p>\n'
+                               '<p>This collection provides a series of '
+                               'Ansible modules and plugins for interacting '
+                               'with the IBM Spectrum Virtualize Family. These '
+                               'products include the IBM SAN Volume '
+                               'Controller, IBM FlashSystem family members '
+                               'built with IBM Spectrum Virtualize '
+                               '(FlashSystem 5010, 5030, 5100, 7200, 9100, '
+                               '9200, 9200R, and V9000), IBM Storwize family, '
+                               'and IBM Spectrum Virtualize for Public Cloud. '
+                               'For more information regarding these products '
+                               'see the <a '
+                               'href="https://www.ibm.com/support/knowledgecenter/en/">IBM '
+                               'Knowledge Center</a> .</p>\n'
+                               '<h2>Requirements</h2>\n'
+                               '<ul>\n'
+                               '<li>Ansible version 2.9 or higher</li>\n'
+                               '</ul>\n'
+                               '<h2>Installation</h2>\n'
+                               '<p>To install the IBM Spectrum Virtualize '
+                               'collection hosted in Galaxy:</p>\n'
+                               '<pre><code>ansible-galaxy collection install '
+                               'ibm.spectrum_virtualize\n'
+                               '</code></pre>\n'
+                               '\n'
+                               '<p>To upgrade to the latest version of the IBM '
+                               'Spectrum Virtualize collection:</p>\n'
+                               '<pre><code>ansible-galaxy collection install '
+                               'ibm.spectrum_virtualize --force\n'
+                               '</code></pre>\n'
+                               '\n'
+                               '<h2>Usage</h2>\n'
+                               '<h3>Playbooks</h3>\n'
+                               '<p>To use a module from the IBM Spectrum '
+                               'Virtualize collection, please reference the '
+                               'full namespace, collection name, and module '
+                               'name that you want to use:</p>\n'
+                               '<pre><code>---\n'
+                               '- name: Using the IBM Spectrum Virtualize '
+                               'collection\n'
+                               '  hosts: localhost\n'
+                               '  tasks:\n'
+                               '    - name: Gather info from storage\n'
+                               '      ibm.spectrum_virtualize.ibm_svc_info:\n'
+                               '        clustername: x.x.x.x\n'
+                               '        domain:\n'
+                               '        username: username\n'
+                               '        password: password\n'
+                               '        log_path: /tmp/playbook.debug\n'
+                               '        name: gather_info\n'
+                               '        state: info\n'
+                               '        gather_subset: all\n'
+                               '</code></pre>\n'
+                               '\n'
+                               '<p>Alternatively, you can add a full namepsace '
+                               'and collection name in the '
+                               '<code>collections</code> element:</p>\n'
+                               '<pre><code>---\n'
+                               '- name: Using the IBM Spectrum Virtualize '
+                               'collection\n'
+                               '  collections:\n'
+                               '    - ibm.spectrum_virtualize\n'
+                               '  gather_facts: no\n'
+                               '  connection: local\n'
+                               '  hosts: localhost\n'
+                               '  tasks:\n'
+                               '    - name: Gather info from storage\n'
+                               '      ibm_svc_info:\n'
+                               '        clustername: x.x.x.x\n'
+                               '        domain:\n'
+                               '        username: username\n'
+                               '        password: password\n'
+                               '        log_path: /tmp/playbook.debug\n'
+                               '        name: gather_info\n'
+                               '        state: info\n'
+                               '        gather_subset: all\n'
+                               '</code></pre>\n'
+                               '\n'
+                               '<h2>Supported Resources</h2>\n'
+                               '<h3>Modules</h3>\n'
+                               '<ul>\n'
+                               '<li>ibm_svc_info - Collects information on the '
+                               'IBM Spectrum Virtualize system</li>\n'
+                               '<li>ibm_svc_host - Host management for IBM '
+                               'Spectrum Virtualize</li>\n'
+                               '<li>ibm_svc_mdisk - MDisk managment for IBM '
+                               'Spectrum Virtualize</li>\n'
+                               '<li>ibm_svc_mdiskgrp - Pool management for IBM '
+                               'Spectrum Virtualize</li>\n'
+                               '<li>ibm_svc_vdisk - Volume management for IBM '
+                               'Spectrum Virtualize</li>\n'
+                               '<li>ibm_svc_vol_map - Volume mapping '
+                               'management for IBM Spectrum Virtualize</li>\n'
+                               '</ul>\n'
+                               '<h2>Limitation</h2>\n'
+                               '<p>The IBM Spectrum Virtualize Ansible '
+                               'collections leverage REST APIs to connect to '
+                               'the  IBM Spectrum Virtualize storage system. '
+                               'This creates the following limitations:\n'
+                               '1. Using the REST API to list more than 2000 '
+                               'objects may create a loss of service from the '
+                               'API side, as it automatically restarts due to '
+                               'memory constraints.\n'
+                               '2. It is not possible to access the REST API '
+                               'using an IPv6 address on a cluster.\n'
+                               '3. To run the Ansible collections, Spectrum '
+                               'Virtualize storage system must be at Version '
+                               '8.1.3 or higher.</p>\n'
+                               '<h2>Contributing</h2>\n'
+                               '<p>Currently we are not accepting community '
+                               'contributions.\n'
+                               'Though, you may periodically review this '
+                               'content to learn when and how contributions '
+                               'can be made in the future.</p>\n'
+                               '<h2>License</h2>\n'
+                               '<p>GNU General Public License v3.0</p>\n'
+                               '<p>See <a href="LICENSE">LICENSE</a> to see '
+                               'the full text.</p>',
+                       'name': 'README.md'},
+ 'contents': [{'content_name': 'ibm_svc_vdisk',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': ['Peng Wang(@wangpww)'],
+                                       'description': ['Ansible interface to '
+                                                       "manage 'mkvdisk' and "
+                                                       "'rmvdisk' volume "
+                                                       'commands.'],
+                                       'filename': '/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_vdisk.py',
+                                       'module': 'ibm_svc_vdisk',
+                                       'options': [{'description': ['The '
+                                                                    'hostname '
+                                                                    'or '
+                                                                    'management '
+                                                                    'IP of the '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'clustername',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Domain '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'domain',
+                                                    'type': 'str'},
+                                                   {'choices': ['on',
+                                                                'off',
+                                                                'auto'],
+                                                    'default': 'off',
+                                                    'description': ['Defines '
+                                                                    'use of '
+                                                                    'easytier '
+                                                                    'with '
+                                                                    'VDisk'],
+                                                    'name': 'easytier',
+                                                    'type': 'str'},
+                                                   {'description': ['Debugs '
+                                                                    'log for '
+                                                                    'this '
+                                                                    'file'],
+                                                    'name': 'log_path',
+                                                    'type': 'str'},
+                                                   {'description': ['Specifies '
+                                                                    'one or '
+                                                                    'more '
+                                                                    'storage '
+                                                                    'pools '
+                                                                    'name to '
+                                                                    'use when '
+                                                                    'you are '
+                                                                    'creating '
+                                                                    'this '
+                                                                    'volume'],
+                                                    'name': 'mdiskgrp',
+                                                    'type': 'str'},
+                                                   {'description': ['Specifies '
+                                                                    'a name to '
+                                                                    'assign to '
+                                                                    'the new '
+                                                                    'volume'],
+                                                    'name': 'name',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'password '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'password',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Defines '
+                                                                    'size of '
+                                                                    'VDisk'],
+                                                    'name': 'size',
+                                                    'type': 'str'},
+                                                   {'choices': ['absent',
+                                                                'present'],
+                                                    'description': ['Creates '
+                                                                    '(C(present)) '
+                                                                    'or '
+                                                                    'removes '
+                                                                    '(C(absent)) '
+                                                                    'a volume'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['b',
+                                                                'kb',
+                                                                'mb',
+                                                                'gb',
+                                                                'tb',
+                                                                'pb'],
+                                                    'default': 'mb',
+                                                    'description': ['Defines '
+                                                                    'the size '
+                                                                    'optoin '
+                                                                    'for the '
+                                                                    'storage '
+                                                                    'unit'],
+                                                    'name': 'unit',
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'username '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'username',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Validate '
+                                                                    'certification'],
+                                                    'name': 'validate_certs',
+                                                    'type': 'bool'}],
+                                       'short_description': 'This module '
+                                                            'manages volumes '
+                                                            'on IBM Spectrum '
+                                                            'Virtualize Family '
+                                                            'storage systems.',
+                                       'version_added': '2.10'},
+                               'examples': '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to create a '
+                                           'volume\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Create volume\n'
+                                           '      ibm_svc_vdisk:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/playbook.debug\n'
+                                           '        name: volume0\n'
+                                           '        state: present\n'
+                                           '        mdiskgrp: Pool0\n'
+                                           "        easytier: 'off'\n"
+                                           '        size: "4294967296"\n'
+                                           '        unit: b\n'
+                                           '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to delete a '
+                                           'volume\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Delete volume\n'
+                                           '      ibm_svc_vdisk:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/playbook.debug\n'
+                                           '        name: volume0\n'
+                                           '        state: absent\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'ibm_svc_info',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': ['Peng Wang (@wangpww)'],
+                                       'description': ['Gathers the list of '
+                                                       'specified IBM Spectrum '
+                                                       'Virtualize storage '
+                                                       'system entities. These '
+                                                       'include the list of '
+                                                       'nodes, pools, volumes, '
+                                                       'hosts, host clusters, '
+                                                       'FC ports, iSCSI ports, '
+                                                       'target port FC, FC '
+                                                       'consistgrp, vdiskcopy, '
+                                                       'I/O groups, FC map, FC '
+                                                       'connectivity, NVMe '
+                                                       'fabric, array, and '
+                                                       'system.'],
+                                       'filename': '/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_info.py',
+                                       'module': 'ibm_svc_info',
+                                       'options': [{'description': ['The '
+                                                                    'hostname '
+                                                                    'or '
+                                                                    'management '
+                                                                    'IP of the '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'clustername',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Domain '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'domain',
+                                                    'type': 'str'},
+                                                   {'choices': ['vol',
+                                                                'pool',
+                                                                'node',
+                                                                'iog',
+                                                                'host',
+                                                                'hc',
+                                                                'fcport',
+                                                                'iscsiport',
+                                                                'fcmap',
+                                                                'fc',
+                                                                'fcconsistgrp',
+                                                                'vdiskcopy',
+                                                                'targetportfc',
+                                                                'array',
+                                                                'system',
+                                                                'all'],
+                                                    'default': 'all',
+                                                    'description': ['List of '
+                                                                    'string '
+                                                                    'variables '
+                                                                    'to '
+                                                                    'specify '
+                                                                    'the IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'entities '
+                                                                    'for which '
+                                                                    'information '
+                                                                    'is '
+                                                                    'required.',
+                                                                    'all - '
+                                                                    'list of '
+                                                                    'all IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'entities '
+                                                                    'supported '
+                                                                    'by the '
+                                                                    'module',
+                                                                    'vol - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for '
+                                                                    'VDisks',
+                                                                    'pool - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for '
+                                                                    'mdiskgrps',
+                                                                    'node - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for nodes',
+                                                                    'iog - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for I/O '
+                                                                    'groups',
+                                                                    'host - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for hosts',
+                                                                    'hc - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for host '
+                                                                    'clusters',
+                                                                    'fc - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for FC '
+                                                                    'connectivity',
+                                                                    'fcport - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for FC '
+                                                                    'ports',
+                                                                    'targetportfc '
+                                                                    '- lists '
+                                                                    'information '
+                                                                    'for WWPN '
+                                                                    'which is '
+                                                                    'required '
+                                                                    'to set up '
+                                                                    'FC zoning '
+                                                                    'and to '
+                                                                    'display '
+                                                                    'the '
+                                                                    'current '
+                                                                    'failover '
+                                                                    'status of '
+                                                                    'host I/O '
+                                                                    'ports',
+                                                                    'fcmap - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for FC '
+                                                                    'maps',
+                                                                    'fcconsistgrp '
+                                                                    '- '
+                                                                    'displays '
+                                                                    'a concise '
+                                                                    'list or a '
+                                                                    'detailed '
+                                                                    'view of '
+                                                                    'FlashCopy '
+                                                                    'consistency '
+                                                                    'groups',
+                                                                    'iscsiport '
+                                                                    '- lists '
+                                                                    'information '
+                                                                    'for iSCSI '
+                                                                    'ports',
+                                                                    'vdiskcopy '
+                                                                    '- lists '
+                                                                    'information '
+                                                                    'for '
+                                                                    'volume '
+                                                                    'copy',
+                                                                    'array - '
+                                                                    'lists '
+                                                                    'information '
+                                                                    'for array '
+                                                                    'MDisks',
+                                                                    'system - '
+                                                                    'displays '
+                                                                    'the '
+                                                                    'storage '
+                                                                    'system '
+                                                                    'information'],
+                                                    'name': 'gather_subset',
+                                                    'required': False,
+                                                    'type': 'list'},
+                                                   {'description': ['Debugs '
+                                                                    'log for '
+                                                                    'this '
+                                                                    'file'],
+                                                    'name': 'log_path',
+                                                    'type': 'str'},
+                                                   {'description': ['Collects '
+                                                                    'storage '
+                                                                    'information'],
+                                                    'name': 'name',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'password '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'password',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['info'],
+                                                    'default': 'info',
+                                                    'description': ['Returns '
+                                                                    '"info"'],
+                                                    'name': 'state',
+                                                    'required': False,
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'username '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'username',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Validate '
+                                                                    'certification'],
+                                                    'name': 'validate_certs',
+                                                    'type': 'bool'}],
+                                       'short_description': 'This module '
+                                                            'gathers various '
+                                                            'information from '
+                                                            'the IBM Spectrum '
+                                                            'Virtualize '
+                                                            'storage systems.',
+                                       'version_added': '2.10'},
+                               'examples': '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to gather '
+                                           'storage information\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Get volume info\n'
+                                           '      ibm_svc_info:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/ansible.log\n'
+                                           '        state: info\n'
+                                           '        gather_subset: vol\n'
+                                           '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to gather '
+                                           'storage information\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Get pool info\n'
+                                           '      ibm_svc_info:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/ansible.log\n'
+                                           '        state: info\n'
+                                           '        gather_subset: pool\n'
+                                           '\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'ibm_svc_vol_map',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': ['Peng Wang(@wangpww)'],
+                                       'description': ['Ansible interface to '
+                                                       'manage volume mapping '
+                                                       'commands '
+                                                       "'mkvdiskhostmap' and "
+                                                       "'rmvdiskhostmap' "
+                                                       'commands.'],
+                                       'filename': '/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_vol_map.py',
+                                       'module': 'ibm_svc_vol_map',
+                                       'options': [{'description': ['The '
+                                                                    'hostname '
+                                                                    'or '
+                                                                    'management '
+                                                                    'IP of the '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'clustername',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Domain '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'domain',
+                                                    'type': 'str'},
+                                                   {'description': ['Specifies '
+                                                                    'the host '
+                                                                    'name for '
+                                                                    'host '
+                                                                    'mapping'],
+                                                    'name': 'host',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Debugs '
+                                                                    'log for '
+                                                                    'this '
+                                                                    'file'],
+                                                    'name': 'log_path',
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'password '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'password',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['absent',
+                                                                'present'],
+                                                    'description': ['Creates '
+                                                                    '(C(present)) '
+                                                                    'or '
+                                                                    'removes '
+                                                                    '(C(absent)) '
+                                                                    'a volume '
+                                                                    'mapping'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'username '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'username',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Validate '
+                                                                    'certification'],
+                                                    'name': 'validate_certs',
+                                                    'type': 'bool'},
+                                                   {'description': ['Specifies '
+                                                                    'the '
+                                                                    'volume '
+                                                                    'name for '
+                                                                    'host '
+                                                                    'mapping'],
+                                                    'name': 'volname',
+                                                    'required': True,
+                                                    'type': 'str'}],
+                                       'short_description': 'This module '
+                                                            'manages volume '
+                                                            'mapping on IBM '
+                                                            'Spectrum '
+                                                            'Virtualize Family '
+                                                            'storage systems.',
+                                       'version_added': '2.10'},
+                               'examples': '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to map a '
+                                           'volume to a host\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: map volume to host\n'
+                                           '      ibm_svc_vol_map:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/playbook.debug\n'
+                                           '        volname: volume0\n'
+                                           '        host: host4test\n'
+                                           '        state: present\n'
+                                           '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to unmap a '
+                                           'volume from a host\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: unmap volume from '
+                                           'host\n'
+                                           '      ibm_svc_vol_map:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/playbook.debug\n'
+                                           '        volname: volume0\n'
+                                           '        host: host4test\n'
+                                           '        state: absent\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'ibm_svc_host',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': ['Peng Wang (@wangpww)'],
+                                       'description': ['Ansible interface to '
+                                                       "manage 'mkhost' and "
+                                                       "'rmhost' host "
+                                                       'commands.'],
+                                       'filename': '/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_host.py',
+                                       'module': 'ibm_svc_host',
+                                       'options': [{'description': ['The '
+                                                                    'hostname '
+                                                                    'or '
+                                                                    'management '
+                                                                    'IP of the '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'clustername',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Domain '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'domain',
+                                                    'type': 'str'},
+                                                   {'description': ['List of '
+                                                                    'Initiator '
+                                                                    'WWN to be '
+                                                                    'added to '
+                                                                    'the host'],
+                                                    'name': 'fcwwpn',
+                                                    'required': False,
+                                                    'type': 'str'},
+                                                   {'default': '0:1:2:3',
+                                                    'description': ['Specifies '
+                                                                    'a set of '
+                                                                    'one or '
+                                                                    'more '
+                                                                    'input/output '
+                                                                    '(I/O) '
+                                                                    'groups '
+                                                                    'that the '
+                                                                    'host can '
+                                                                    'access '
+                                                                    'the '
+                                                                    'volumes '
+                                                                    'from'],
+                                                    'name': 'iogrp',
+                                                    'required': False,
+                                                    'type': 'str'},
+                                                   {'description': ['Initiator '
+                                                                    'IQN to be '
+                                                                    'added to '
+                                                                    'the host'],
+                                                    'name': 'iscsiname',
+                                                    'required': False,
+                                                    'type': 'str'},
+                                                   {'description': ['Debugs '
+                                                                    'log for '
+                                                                    'this '
+                                                                    'file'],
+                                                    'name': 'log_path',
+                                                    'type': 'str'},
+                                                   {'description': ['Specifies '
+                                                                    'a name or '
+                                                                    'label for '
+                                                                    'the new '
+                                                                    'host '
+                                                                    'object'],
+                                                    'name': 'name',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'password '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'password',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['scsi', 'nvme'],
+                                                    'default': 'scsi',
+                                                    'description': ['Specifies '
+                                                                    'the '
+                                                                    'protocol '
+                                                                    'used by '
+                                                                    'the host '
+                                                                    'to '
+                                                                    'communicate '
+                                                                    'with the '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'protocol',
+                                                    'required': False,
+                                                    'type': 'str'},
+                                                   {'choices': ['absent',
+                                                                'present'],
+                                                    'description': ['Creates '
+                                                                    '(C(present)) '
+                                                                    'or '
+                                                                    'removes '
+                                                                    '(C(absent)) '
+                                                                    'a host'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'default': None,
+                                                    'description': ['Specifies '
+                                                                    'the type '
+                                                                    'of host'],
+                                                    'name': 'type',
+                                                    'required': False,
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'username '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'username',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Validate '
+                                                                    'certification'],
+                                                    'name': 'validate_certs',
+                                                    'type': 'bool'}],
+                                       'short_description': 'This module '
+                                                            'manages hosts on '
+                                                            'IBM Spectrum '
+                                                            'Virtualize Family '
+                                                            'storage systems.',
+                                       'version_added': '2.10'},
+                               'examples': '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to create an '
+                                           'iSCSI host\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Define a new iSCSI '
+                                           'host\n'
+                                           '      ibm_svc_host:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/playbook.debug\n'
+                                           '        name: host4test\n'
+                                           '        state: present\n'
+                                           '        iscsiname: '
+                                           'iqn.1994-05.com.redhat:2e358e438b8a\n'
+                                           '        iogrp: 0:1:2:3\n'
+                                           '        protocol: scsi\n'
+                                           '        type: generic\n'
+                                           '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to create an '
+                                           'FC host\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Define a new FC host\n'
+                                           '      ibm_svc_host:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/playbook.debug\n'
+                                           '        name: host4test\n'
+                                           '        state: present\n'
+                                           '        fcwwpn: '
+                                           '100000109B570216:1000001AA0570266\n'
+                                           '        iogrp: 0:1:2:3\n'
+                                           '        protocol: scsi\n'
+                                           '        type: generic\n'
+                                           '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to delete a '
+                                           'host\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Delete host\n'
+                                           '      ibm_svc_host:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        log_path: '
+                                           '/tmp/playbook.debug\n'
+                                           '        name: host4test\n'
+                                           '        state: absent\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'ibm_svc_mdiskgrp',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': ['Peng Wang(@wangpww)'],
+                                       'description': ['Ansible interface to '
+                                                       "manage 'mkmdiskgrp' "
+                                                       "and 'rmmdiskgrp' pool "
+                                                       'commands.'],
+                                       'filename': '/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_mdiskgrp.py',
+                                       'module': 'ibm_svc_mdiskgrp',
+                                       'options': [{'description': ['The '
+                                                                    'hostname '
+                                                                    'or '
+                                                                    'management '
+                                                                    'IP of the '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'clustername',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['yes', 'no'],
+                                                    'default': 'no',
+                                                    'description': ['Defines '
+                                                                    'use of '
+                                                                    'data '
+                                                                    'reduction '
+                                                                    'pools '
+                                                                    '(DRPs) on '
+                                                                    'the MDisk '
+                                                                    'group'],
+                                                    'name': 'datareduction',
+                                                    'type': 'str'},
+                                                   {'description': ['Domain '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'domain',
+                                                    'type': 'str'},
+                                                   {'choices': ['on',
+                                                                'off',
+                                                                'auto'],
+                                                    'default': 'off',
+                                                    'description': ['Defines '
+                                                                    'use of '
+                                                                    'easytier '
+                                                                    'with the '
+                                                                    'MDisk '
+                                                                    'group'],
+                                                    'name': 'easytier',
+                                                    'type': 'str'},
+                                                   {'choices': ['yes', 'no'],
+                                                    'default': 'no',
+                                                    'description': ['Defines '
+                                                                    'use of '
+                                                                    'encryption '
+                                                                    'with the '
+                                                                    'MDisk '
+                                                                    'group'],
+                                                    'name': 'encrypt',
+                                                    'type': 'str'},
+                                                   {'description': ['Specifies '
+                                                                    'the size '
+                                                                    'of the '
+                                                                    'extents '
+                                                                    'for this '
+                                                                    'group in '
+                                                                    'MB'],
+                                                    'name': 'ext',
+                                                    'type': 'int'},
+                                                   {'description': ['Debugs '
+                                                                    'log for '
+                                                                    'this '
+                                                                    'file'],
+                                                    'name': 'log_path',
+                                                    'type': 'str'},
+                                                   {'description': ['Specifies '
+                                                                    'a name to '
+                                                                    'assign to '
+                                                                    'the new '
+                                                                    'pool'],
+                                                    'name': 'name',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['parentmdiskgrp '
+                                                                    'for '
+                                                                    'subpool'],
+                                                    'name': 'parentmdiskgrp',
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'password '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'password',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Specifies '
+                                                                    'the child '
+                                                                    'pool '
+                                                                    'capacity. '
+                                                                    'The value '
+                                                                    'must be a '
+                                                                    'numeric '
+                                                                    'value '
+                                                                    '(and an '
+                                                                    'integer '
+                                                                    'multiple '
+                                                                    'of the '
+                                                                    'extent '
+                                                                    'size)'],
+                                                    'name': 'size',
+                                                    'type': 'int'},
+                                                   {'choices': ['absent',
+                                                                'present'],
+                                                    'description': ['Creates '
+                                                                    '(C(present)) '
+                                                                    'or '
+                                                                    'removes '
+                                                                    '(C(absent)) '
+                                                                    'an MDisk '
+                                                                    'group'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Unit for '
+                                                                    'subpool'],
+                                                    'name': 'unit',
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'username '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'username',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Validate '
+                                                                    'certification'],
+                                                    'name': 'validate_certs',
+                                                    'type': 'bool'}],
+                                       'short_description': 'This module '
+                                                            'manages pools on '
+                                                            'IBM Spectrum '
+                                                            'Virtualize Family '
+                                                            'storage systems.',
+                                       'version_added': '2.10'},
+                               'examples': '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to create a '
+                                           'pool\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: make mdisk group\n'
+                                           '      ibm_svc_mdiskgrp:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        name: pool1\n'
+                                           '        state: present\n'
+                                           '        datareduction: no\n'
+                                           '        easytier: auto\n'
+                                           '        encrypt: no\n'
+                                           '        ext: 1024\n'
+                                           '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to delete a '
+                                           'pool\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: delete mdisk group\n'
+                                           '      ibm_svc_mdiskgrp:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        name: pool1\n'
+                                           '        state: absent\n'
+                                           '\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'ibm_svc_mdisk',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': ['Peng Wang(@wangpww)'],
+                                       'description': ['Ansible interface to '
+                                                       "manage 'mkarray' and "
+                                                       "'rmmdisk' MDisk "
+                                                       'commands.'],
+                                       'filename': '/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_mdisk.py',
+                                       'module': 'ibm_svc_mdisk',
+                                       'options': [{'description': ['The '
+                                                                    'hostname '
+                                                                    'or '
+                                                                    'management '
+                                                                    'IP of the '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'clustername',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Domain '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'domain',
+                                                    'type': 'str'},
+                                                   {'description': ['Drive(s) '
+                                                                    'to use as '
+                                                                    'members '
+                                                                    'of the '
+                                                                    'RAID '
+                                                                    'array'],
+                                                    'name': 'drive',
+                                                    'type': 'str'},
+                                                   {'choices': ['yes', 'no'],
+                                                    'default': 'no',
+                                                    'description': ['encrypt'],
+                                                    'name': 'encrypt',
+                                                    'type': 'str'},
+                                                   {'choices': ['raid0',
+                                                                'raid1',
+                                                                'raid5',
+                                                                'raid6',
+                                                                'raid10'],
+                                                    'description': ['level'],
+                                                    'name': 'level',
+                                                    'type': 'str'},
+                                                   {'description': ['Debugs '
+                                                                    'log for '
+                                                                    'this '
+                                                                    'file'],
+                                                    'name': 'log_path',
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'storage '
+                                                                    'pool '
+                                                                    '(mdiskgrp) '
+                                                                    'to which '
+                                                                    'you want '
+                                                                    'to add '
+                                                                    'the '
+                                                                    'MDisk'],
+                                                    'name': 'mdiskgrp',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The MDisk '
+                                                                    'name'],
+                                                    'name': 'name',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'password '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'password',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['absent',
+                                                                'present'],
+                                                    'description': ['Creates '
+                                                                    '(C(present)) '
+                                                                    'or '
+                                                                    'removes '
+                                                                    '(C(absent)) '
+                                                                    'the '
+                                                                    'MDisk'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['REST API '
+                                                                    'username '
+                                                                    'for the '
+                                                                    'IBM '
+                                                                    'Spectrum '
+                                                                    'Virtualize '
+                                                                    'storage '
+                                                                    'system'],
+                                                    'name': 'username',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Validate '
+                                                                    'certification'],
+                                                    'name': 'validate_certs',
+                                                    'type': 'bool'}],
+                                       'short_description': 'This module '
+                                                            'manages MDisks on '
+                                                            'IBM Spectrum '
+                                                            'Virtualize Family '
+                                                            'storage systems.',
+                                       'version_added': '2.10'},
+                               'examples': '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to create a '
+                                           'new MDisk array\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Create MDisk and named '
+                                           'mdisk20\n'
+                                           '      ibm_svc_mdisk:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        name: mdisk20\n'
+                                           '        state: present\n'
+                                           '        level: raid0\n'
+                                           "        drive: '5:6'\n"
+                                           '        encrypt: no\n'
+                                           '        mdiskgrp: pool20\n'
+                                           '\n'
+                                           '- name: Using the IBM Spectrum '
+                                           'Virtualize collection to delete an '
+                                           'MDisk array\n'
+                                           '  hosts: localhost\n'
+                                           '  collections:\n'
+                                           '    - ibm.spectrum_virtualize\n'
+                                           '  gather_facts: no\n'
+                                           '  connection: local\n'
+                                           '  tasks:\n'
+                                           '    - name: Delete MDisk named '
+                                           'mdisk20\n'
+                                           '      ibm_svc_mdisk:\n'
+                                           '        clustername: '
+                                           '"{{clustername}}"\n'
+                                           '        domain: "{{domain}}"\n'
+                                           '        username: "{{username}}"\n'
+                                           '        password: "{{password}}"\n'
+                                           '        name: mdisk20\n'
+                                           '        state: absent\n'
+                                           '        mdiskgrp: pool20\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'ibm_svc_utils',
+               'content_type': 'module_utils',
+               'doc_strings': None,
+               'readme_file': None,
+               'readme_html': None}],
+ 'documentation_files': []}
+</pre>
+
+<pre>
+{
+    "collection_readme": {
+        "html": "\u003ch1\u003eAnsible Collection - ibm.spectrum_virtualize\u003c/h1\u003e\n\u003cp\u003e\u003ca href=\"https://docs.ansible.com/ansible/latest/modules/list_of_cloud_modules.html#azure\"\u003e\u003cimg alt=\"Doc\" src=\"https://img.shields.io/badge/docs-latest-brightgreen.svg\"\u003e\u003c/a\u003e\n\u003ca href=\"https://docs.ansible.com/ansible/latest/community/code_of_conduct.html\"\u003e\u003cimg alt=\"Code of conduct\" src=\"https://img.shields.io/badge/code%20of%20conduct-Ansible-silver.svg\"\u003e\u003c/a\u003e\n\u003ca href=\"LICENSE\"\u003e\u003cimg alt=\"License\" src=\"https://img.shields.io/badge/license-GPL%20v3.0-brightgreen.svg\"\u003e\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003eThis collection provides a series of Ansible modules and plugins for interacting with the IBM Spectrum Virtualize Family. These products include the IBM SAN Volume Controller, IBM FlashSystem family members built with IBM Spectrum Virtualize (FlashSystem 5010, 5030, 5100, 7200, 9100, 9200, 9200R, and V9000), IBM Storwize family, and IBM Spectrum Virtualize for Public Cloud. For more information regarding these products see the \u003ca href=\"https://www.ibm.com/support/knowledgecenter/en/\"\u003eIBM Knowledge Center\u003c/a\u003e .\u003c/p\u003e\n\u003ch2\u003eRequirements\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eAnsible version 2.9 or higher\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003eInstallation\u003c/h2\u003e\n\u003cp\u003eTo install the IBM Spectrum Virtualize collection hosted in Galaxy:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eansible-galaxy collection install ibm.spectrum_virtualize\n\u003c/code\u003e\u003c/pre\u003e\n\n\u003cp\u003eTo upgrade to the latest version of the IBM Spectrum Virtualize collection:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eansible-galaxy collection install ibm.spectrum_virtualize --force\n\u003c/code\u003e\u003c/pre\u003e\n\n\u003ch2\u003eUsage\u003c/h2\u003e\n\u003ch3\u003ePlaybooks\u003c/h3\u003e\n\u003cp\u003eTo use a module from the IBM Spectrum Virtualize collection, please reference the full namespace, collection name, and module name that you want to use:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e---\n- name: Using the IBM Spectrum Virtualize collection\n  hosts: localhost\n  tasks:\n    - name: Gather info from storage\n      ibm.spectrum_virtualize.ibm_svc_info:\n        clustername: x.x.x.x\n        domain:\n        username: username\n        password: password\n        log_path: /tmp/playbook.debug\n        name: gather_info\n        state: info\n        gather_subset: all\n\u003c/code\u003e\u003c/pre\u003e\n\n\u003cp\u003eAlternatively, you can add a full namepsace and collection name in the \u003ccode\u003ecollections\u003c/code\u003e element:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e---\n- name: Using the IBM Spectrum Virtualize collection\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  hosts: localhost\n  tasks:\n    - name: Gather info from storage\n      ibm_svc_info:\n        clustername: x.x.x.x\n        domain:\n        username: username\n        password: password\n        log_path: /tmp/playbook.debug\n        name: gather_info\n        state: info\n        gather_subset: all\n\u003c/code\u003e\u003c/pre\u003e\n\n\u003ch2\u003eSupported Resources\u003c/h2\u003e\n\u003ch3\u003eModules\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eibm_svc_info - Collects information on the IBM Spectrum Virtualize system\u003c/li\u003e\n\u003cli\u003eibm_svc_host - Host management for IBM Spectrum Virtualize\u003c/li\u003e\n\u003cli\u003eibm_svc_mdisk - MDisk managment for IBM Spectrum Virtualize\u003c/li\u003e\n\u003cli\u003eibm_svc_mdiskgrp - Pool management for IBM Spectrum Virtualize\u003c/li\u003e\n\u003cli\u003eibm_svc_vdisk - Volume management for IBM Spectrum Virtualize\u003c/li\u003e\n\u003cli\u003eibm_svc_vol_map - Volume mapping management for IBM Spectrum Virtualize\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003eLimitation\u003c/h2\u003e\n\u003cp\u003eThe IBM Spectrum Virtualize Ansible collections leverage REST APIs to connect to the  IBM Spectrum Virtualize storage system. This creates the following limitations:\n1. Using the REST API to list more than 2000 objects may create a loss of service from the API side, as it automatically restarts due to memory constraints.\n2. It is not possible to access the REST API using an IPv6 address on a cluster.\n3. To run the Ansible collections, Spectrum Virtualize storage system must be at Version 8.1.3 or higher.\u003c/p\u003e\n\u003ch2\u003eContributing\u003c/h2\u003e\n\u003cp\u003eCurrently we are not accepting community contributions.\nThough, you may periodically review this content to learn when and how contributions can be made in the future.\u003c/p\u003e\n\u003ch2\u003eLicense\u003c/h2\u003e\n\u003cp\u003eGNU General Public License v3.0\u003c/p\u003e\n\u003cp\u003eSee \u003ca href=\"LICENSE\"\u003eLICENSE\u003c/a\u003e to see the full text.\u003c/p\u003e",
+        "name": "README.md"
+    },
+    "contents": [
+        {
+            "content_name": "ibm_svc_vdisk",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": [
+                        "Peng Wang(@wangpww)"
+                    ],
+                    "description": [
+                        "Ansible interface to manage \u0027mkvdisk\u0027 and \u0027rmvdisk\u0027 volume commands."
+                    ],
+                    "filename": "/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_vdisk.py",
+                    "module": "ibm_svc_vdisk",
+                    "options": [
+                        {
+                            "description": [
+                                "The hostname or management IP of the Spectrum Virtualize storage system"
+                            ],
+                            "name": "clustername",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Domain for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "domain",
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "on",
+                                "off",
+                                "auto"
+                            ],
+                            "default": "off",
+                            "description": [
+                                "Defines use of easytier with VDisk"
+                            ],
+                            "name": "easytier",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Debugs log for this file"
+                            ],
+                            "name": "log_path",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Specifies one or more storage pools name to use when you are creating this volume"
+                            ],
+                            "name": "mdiskgrp",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Specifies a name to assign to the new volume"
+                            ],
+                            "name": "name",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API password for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "password",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Defines size of VDisk"
+                            ],
+                            "name": "size",
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "absent",
+                                "present"
+                            ],
+                            "description": [
+                                "Creates (C(present)) or removes (C(absent)) a volume"
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "b",
+                                "kb",
+                                "mb",
+                                "gb",
+                                "tb",
+                                "pb"
+                            ],
+                            "default": "mb",
+                            "description": [
+                                "Defines the size optoin for the storage unit"
+                            ],
+                            "name": "unit",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API username for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "username",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Validate certification"
+                            ],
+                            "name": "validate_certs",
+                            "type": "bool"
+                        }
+                    ],
+                    "short_description": "This module manages volumes on IBM Spectrum Virtualize Family storage systems.",
+                    "version_added": "2.10"
+                },
+                "examples": "\n- name: Using the IBM Spectrum Virtualize collection to create a volume\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Create volume\n      ibm_svc_vdisk:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/playbook.debug\n        name: volume0\n        state: present\n        mdiskgrp: Pool0\n        easytier: \u0027off\u0027\n        size: \"4294967296\"\n        unit: b\n\n- name: Using the IBM Spectrum Virtualize collection to delete a volume\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Delete volume\n      ibm_svc_vdisk:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/playbook.debug\n        name: volume0\n        state: absent\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "ibm_svc_info",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": [
+                        "Peng Wang (@wangpww)"
+                    ],
+                    "description": [
+                        "Gathers the list of specified IBM Spectrum Virtualize storage system entities. These include the list of nodes, pools, volumes, hosts, host clusters, FC ports, iSCSI ports, target port FC, FC consistgrp, vdiskcopy, I/O groups, FC map, FC connectivity, NVMe fabric, array, and system."
+                    ],
+                    "filename": "/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_info.py",
+                    "module": "ibm_svc_info",
+                    "options": [
+                        {
+                            "description": [
+                                "The hostname or management IP of the Spectrum Virtualize storage system"
+                            ],
+                            "name": "clustername",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Domain for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "domain",
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "vol",
+                                "pool",
+                                "node",
+                                "iog",
+                                "host",
+                                "hc",
+                                "fcport",
+                                "iscsiport",
+                                "fcmap",
+                                "fc",
+                                "fcconsistgrp",
+                                "vdiskcopy",
+                                "targetportfc",
+                                "array",
+                                "system",
+                                "all"
+                            ],
+                            "default": "all",
+                            "description": [
+                                "List of string variables to specify the IBM Spectrum Virtualize entities for which information is required.",
+                                "all - list of all IBM Spectrum Virtualize entities supported by the module",
+                                "vol - lists information for VDisks",
+                                "pool - lists information for mdiskgrps",
+                                "node - lists information for nodes",
+                                "iog - lists information for I/O groups",
+                                "host - lists information for hosts",
+                                "hc - lists information for host clusters",
+                                "fc - lists information for FC connectivity",
+                                "fcport - lists information for FC ports",
+                                "targetportfc - lists information for WWPN which is required to set up FC zoning and to display the current failover status of host I/O ports",
+                                "fcmap - lists information for FC maps",
+                                "fcconsistgrp - displays a concise list or a detailed view of FlashCopy consistency groups",
+                                "iscsiport - lists information for iSCSI ports",
+                                "vdiskcopy - lists information for volume copy",
+                                "array - lists information for array MDisks",
+                                "system - displays the storage system information"
+                            ],
+                            "name": "gather_subset",
+                            "required": false,
+                            "type": "list"
+                        },
+                        {
+                            "description": [
+                                "Debugs log for this file"
+                            ],
+                            "name": "log_path",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Collects storage information"
+                            ],
+                            "name": "name",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API password for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "password",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "info"
+                            ],
+                            "default": "info",
+                            "description": [
+                                "Returns \"info\""
+                            ],
+                            "name": "state",
+                            "required": false,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API username for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "username",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Validate certification"
+                            ],
+                            "name": "validate_certs",
+                            "type": "bool"
+                        }
+                    ],
+                    "short_description": "This module gathers various information from the IBM Spectrum Virtualize storage systems.",
+                    "version_added": "2.10"
+                },
+                "examples": "\n- name: Using the IBM Spectrum Virtualize collection to gather storage information\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Get volume info\n      ibm_svc_info:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/ansible.log\n        state: info\n        gather_subset: vol\n\n- name: Using the IBM Spectrum Virtualize collection to gather storage information\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Get pool info\n      ibm_svc_info:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/ansible.log\n        state: info\n        gather_subset: pool\n\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "ibm_svc_vol_map",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": [
+                        "Peng Wang(@wangpww)"
+                    ],
+                    "description": [
+                        "Ansible interface to manage volume mapping commands \u0027mkvdiskhostmap\u0027 and \u0027rmvdiskhostmap\u0027 commands."
+                    ],
+                    "filename": "/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_vol_map.py",
+                    "module": "ibm_svc_vol_map",
+                    "options": [
+                        {
+                            "description": [
+                                "The hostname or management IP of the Spectrum Virtualize storage system"
+                            ],
+                            "name": "clustername",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Domain for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "domain",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Specifies the host name for host mapping"
+                            ],
+                            "name": "host",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Debugs log for this file"
+                            ],
+                            "name": "log_path",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API password for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "password",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "absent",
+                                "present"
+                            ],
+                            "description": [
+                                "Creates (C(present)) or removes (C(absent)) a volume mapping"
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API username for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "username",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Validate certification"
+                            ],
+                            "name": "validate_certs",
+                            "type": "bool"
+                        },
+                        {
+                            "description": [
+                                "Specifies the volume name for host mapping"
+                            ],
+                            "name": "volname",
+                            "required": true,
+                            "type": "str"
+                        }
+                    ],
+                    "short_description": "This module manages volume mapping on IBM Spectrum Virtualize Family storage systems.",
+                    "version_added": "2.10"
+                },
+                "examples": "\n- name: Using the IBM Spectrum Virtualize collection to map a volume to a host\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: map volume to host\n      ibm_svc_vol_map:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/playbook.debug\n        volname: volume0\n        host: host4test\n        state: present\n\n- name: Using the IBM Spectrum Virtualize collection to unmap a volume from a host\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: unmap volume from host\n      ibm_svc_vol_map:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/playbook.debug\n        volname: volume0\n        host: host4test\n        state: absent\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "ibm_svc_host",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": [
+                        "Peng Wang (@wangpww)"
+                    ],
+                    "description": [
+                        "Ansible interface to manage \u0027mkhost\u0027 and \u0027rmhost\u0027 host commands."
+                    ],
+                    "filename": "/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_host.py",
+                    "module": "ibm_svc_host",
+                    "options": [
+                        {
+                            "description": [
+                                "The hostname or management IP of the Spectrum Virtualize storage system"
+                            ],
+                            "name": "clustername",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Domain for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "domain",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "List of Initiator WWN to be added to the host"
+                            ],
+                            "name": "fcwwpn",
+                            "required": false,
+                            "type": "str"
+                        },
+                        {
+                            "default": "0:1:2:3",
+                            "description": [
+                                "Specifies a set of one or more input/output (I/O) groups that the host can access the volumes from"
+                            ],
+                            "name": "iogrp",
+                            "required": false,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Initiator IQN to be added to the host"
+                            ],
+                            "name": "iscsiname",
+                            "required": false,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Debugs log for this file"
+                            ],
+                            "name": "log_path",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Specifies a name or label for the new host object"
+                            ],
+                            "name": "name",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API password for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "password",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "scsi",
+                                "nvme"
+                            ],
+                            "default": "scsi",
+                            "description": [
+                                "Specifies the protocol used by the host to communicate with the storage system"
+                            ],
+                            "name": "protocol",
+                            "required": false,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "absent",
+                                "present"
+                            ],
+                            "description": [
+                                "Creates (C(present)) or removes (C(absent)) a host"
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "default": null,
+                            "description": [
+                                "Specifies the type of host"
+                            ],
+                            "name": "type",
+                            "required": false,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API username for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "username",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Validate certification"
+                            ],
+                            "name": "validate_certs",
+                            "type": "bool"
+                        }
+                    ],
+                    "short_description": "This module manages hosts on IBM Spectrum Virtualize Family storage systems.",
+                    "version_added": "2.10"
+                },
+                "examples": "\n- name: Using the IBM Spectrum Virtualize collection to create an iSCSI host\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Define a new iSCSI host\n      ibm_svc_host:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/playbook.debug\n        name: host4test\n        state: present\n        iscsiname: iqn.1994-05.com.redhat:2e358e438b8a\n        iogrp: 0:1:2:3\n        protocol: scsi\n        type: generic\n\n- name: Using the IBM Spectrum Virtualize collection to create an FC host\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Define a new FC host\n      ibm_svc_host:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/playbook.debug\n        name: host4test\n        state: present\n        fcwwpn: 100000109B570216:1000001AA0570266\n        iogrp: 0:1:2:3\n        protocol: scsi\n        type: generic\n\n- name: Using the IBM Spectrum Virtualize collection to delete a host\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Delete host\n      ibm_svc_host:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        log_path: /tmp/playbook.debug\n        name: host4test\n        state: absent\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "ibm_svc_mdiskgrp",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": [
+                        "Peng Wang(@wangpww)"
+                    ],
+                    "description": [
+                        "Ansible interface to manage \u0027mkmdiskgrp\u0027 and \u0027rmmdiskgrp\u0027 pool commands."
+                    ],
+                    "filename": "/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_mdiskgrp.py",
+                    "module": "ibm_svc_mdiskgrp",
+                    "options": [
+                        {
+                            "description": [
+                                "The hostname or management IP of the Spectrum Virtualize storage system"
+                            ],
+                            "name": "clustername",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "yes",
+                                "no"
+                            ],
+                            "default": "no",
+                            "description": [
+                                "Defines use of data reduction pools (DRPs) on the MDisk group"
+                            ],
+                            "name": "datareduction",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Domain for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "domain",
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "on",
+                                "off",
+                                "auto"
+                            ],
+                            "default": "off",
+                            "description": [
+                                "Defines use of easytier with the MDisk group"
+                            ],
+                            "name": "easytier",
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "yes",
+                                "no"
+                            ],
+                            "default": "no",
+                            "description": [
+                                "Defines use of encryption with the MDisk group"
+                            ],
+                            "name": "encrypt",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Specifies the size of the extents for this group in MB"
+                            ],
+                            "name": "ext",
+                            "type": "int"
+                        },
+                        {
+                            "description": [
+                                "Debugs log for this file"
+                            ],
+                            "name": "log_path",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Specifies a name to assign to the new pool"
+                            ],
+                            "name": "name",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "parentmdiskgrp for subpool"
+                            ],
+                            "name": "parentmdiskgrp",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API password for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "password",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Specifies the child pool capacity. The value must be a numeric value (and an integer multiple of the extent size)"
+                            ],
+                            "name": "size",
+                            "type": "int"
+                        },
+                        {
+                            "choices": [
+                                "absent",
+                                "present"
+                            ],
+                            "description": [
+                                "Creates (C(present)) or removes (C(absent)) an MDisk group"
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Unit for subpool"
+                            ],
+                            "name": "unit",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API username for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "username",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Validate certification"
+                            ],
+                            "name": "validate_certs",
+                            "type": "bool"
+                        }
+                    ],
+                    "short_description": "This module manages pools on IBM Spectrum Virtualize Family storage systems.",
+                    "version_added": "2.10"
+                },
+                "examples": "\n- name: Using the IBM Spectrum Virtualize collection to create a pool\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: make mdisk group\n      ibm_svc_mdiskgrp:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        name: pool1\n        state: present\n        datareduction: no\n        easytier: auto\n        encrypt: no\n        ext: 1024\n\n- name: Using the IBM Spectrum Virtualize collection to delete a pool\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: delete mdisk group\n      ibm_svc_mdiskgrp:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        name: pool1\n        state: absent\n\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "ibm_svc_mdisk",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": [
+                        "Peng Wang(@wangpww)"
+                    ],
+                    "description": [
+                        "Ansible interface to manage \u0027mkarray\u0027 and \u0027rmmdisk\u0027 MDisk commands."
+                    ],
+                    "filename": "/tmp/tmp83q_9gwb/ansible_collections/ibm/spectrum_virtualize/plugins/modules/ibm_svc_mdisk.py",
+                    "module": "ibm_svc_mdisk",
+                    "options": [
+                        {
+                            "description": [
+                                "The hostname or management IP of the Spectrum Virtualize storage system"
+                            ],
+                            "name": "clustername",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Domain for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "domain",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Drive(s) to use as members of the RAID array"
+                            ],
+                            "name": "drive",
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "yes",
+                                "no"
+                            ],
+                            "default": "no",
+                            "description": [
+                                "encrypt"
+                            ],
+                            "name": "encrypt",
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "raid0",
+                                "raid1",
+                                "raid5",
+                                "raid6",
+                                "raid10"
+                            ],
+                            "description": [
+                                "level"
+                            ],
+                            "name": "level",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Debugs log for this file"
+                            ],
+                            "name": "log_path",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The storage pool (mdiskgrp) to which you want to add the MDisk"
+                            ],
+                            "name": "mdiskgrp",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The MDisk name"
+                            ],
+                            "name": "name",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API password for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "password",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "absent",
+                                "present"
+                            ],
+                            "description": [
+                                "Creates (C(present)) or removes (C(absent)) the MDisk"
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "REST API username for the IBM Spectrum Virtualize storage system"
+                            ],
+                            "name": "username",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Validate certification"
+                            ],
+                            "name": "validate_certs",
+                            "type": "bool"
+                        }
+                    ],
+                    "short_description": "This module manages MDisks on IBM Spectrum Virtualize Family storage systems.",
+                    "version_added": "2.10"
+                },
+                "examples": "\n- name: Using the IBM Spectrum Virtualize collection to create a new MDisk array\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Create MDisk and named mdisk20\n      ibm_svc_mdisk:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        name: mdisk20\n        state: present\n        level: raid0\n        drive: \u00275:6\u0027\n        encrypt: no\n        mdiskgrp: pool20\n\n- name: Using the IBM Spectrum Virtualize collection to delete an MDisk array\n  hosts: localhost\n  collections:\n    - ibm.spectrum_virtualize\n  gather_facts: no\n  connection: local\n  tasks:\n    - name: Delete MDisk named mdisk20\n      ibm_svc_mdisk:\n        clustername: \"{{clustername}}\"\n        domain: \"{{domain}}\"\n        username: \"{{username}}\"\n        password: \"{{password}}\"\n        name: mdisk20\n        state: absent\n        mdiskgrp: pool20\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "ibm_svc_utils",
+            "content_type": "module_utils",
+            "doc_strings": null,
+            "readme_file": null,
+            "readme_html": null
+        }
+    ],
+    "documentation_files": []
+}
+</pre>
+
+
+</div>
+</div>
+    <div id="links"><!-- coleslaw start siblings template="<TemplateReference 'sibling_links.html.j2'>" -->
+<ul class="nav">
+
+    
+    
+    <li class="nav-item">
+    <a class="nav-link" href="index.json">index.json</a>
+    </li>
+
+</ul>
+<!-- coleslaw end siblings template="<TemplateReference 'sibling_links.html.j2'>" --></div>
+    <div id="footer">
+        
+    <!-- coleslaw start template "<TemplateReference 'javascript.html.j2'>" -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script>
+
+<!-- prism syntax highlighting -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<!-- coleslaw end template "<TemplateReference 'javascript.html.j2'>" -->
+
+    </div>
+</body>
+<!-- coleslaw end base-before-end-html template="<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
+</html>
+<!-- coleslaw end base template="<TemplateReference 'collection_version_docs_blob.html.j2'>" -->

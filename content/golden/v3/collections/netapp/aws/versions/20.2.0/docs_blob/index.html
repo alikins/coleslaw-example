@@ -1,0 +1,1637 @@
+<!-- coleslaw start default-before-extends template "<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
+
+<!-- coleslaw start base template="<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- coleslaw start base-after-html template="<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
+<head>
+    
+    
+    <!-- coleslaw start template "<TemplateReference 'head_block.html.j2'>" -->
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/spacelab/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sIQOcNYer0kt7oTyFe/YrGzKMFP/qxsJbXTxq0/uiZQgpwXwEu41sVz2M61lWbai"
+        crossorigin="anonymous">
+<!-- Bootstrap-table -->
+<link href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css" rel="stylesheet">
+<!-- prism syntax highlighting -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism.css" rel="stylesheet" />
+<!-- coleslaw end template="<TemplateReference 'head_block.html.j2'>" -->
+    <title>docs_blob</title>
+    
+
+</head>
+<body>
+    <div id="content">
+
+    <!-- coleslaw start template="<TemplateReference 'navbar.html.j2'>"  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Coleslaw</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/alikins/coleslaw">About</a>
+      </li>
+    </ul>
+    <span class="badge badge-primary">Coleslaw</span>
+  </div>
+</nav>
+<!-- coleslaw end template="<TemplateReference 'navbar.html.j2'> -->
+    <!-- coleslaw start template="<TemplateReference 'breadcrumb.html.j2'>" -->
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+
+    <li class="breadcrumb-item"><a href="../../../../../../../../../index.html">home</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../../../../../index.html">content</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../../../../index.html">golden</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../../../index.html">v3</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../../index.html">collections</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../../index.html">netapp</a></li>
+
+    <li class="breadcrumb-item"><a href="../../../index.html">aws</a></li>
+
+    <li class="breadcrumb-item"><a href="../../index.html">versions</a></li>
+
+    <li class="breadcrumb-item"><a href="../index.html">20.2.0</a></li>
+
+    <li class="breadcrumb-item"><a href="index.html">docs_blob</a></li>
+
+<li class="breadcrumb-item"><a href="index.html">index.html</a></li>
+</ol>
+</nav>
+<!-- coleslaw end template="<TemplateReference 'breadcrumb.html.j2'>" -->
+
+<div class="container">
+
+<pre>
+{'collection_readme': {'html': '<p>=============================================================</p>\n'
+                               '<p>netapp.aws                                                   '
+                               '</p>\n'
+                               '<p>NetApp AWS CVS '
+                               'Collection                                    '
+                               '</p>\n'
+                               '<p>Copyright (c) 2019 NetApp, Inc. All rights '
+                               'reserved.       <br>\n'
+                               'Specifications subject to change without '
+                               'notice.             </p>\n'
+                               '<p>=============================================================</p>\n'
+                               '<h1>Installation</h1>\n'
+                               '<pre><code>ansible-galaxy collection install '
+                               'netapp.aws\n'
+                               '</code></pre>\n'
+                               '\n'
+                               '<p>To use Collection add the following to the '
+                               'top of your playbook, with out this you will '
+                               'be using Ansible 2.9 version of the '
+                               'module</p>\n'
+                               '<pre><code>collections:\n'
+                               '  - netapp.aws\n'
+                               '</code></pre>\n'
+                               '\n'
+                               '<h1>Need help</h1>\n'
+                               '<p>Join our Slack Channel at <a '
+                               'href="http://netapp.io/slack">Netapp.io</a></p>\n'
+                               '<h1>Notes</h1>\n'
+                               '<p>These Ansible modules are supporting NetApp '
+                               'Cloud Volumes Service for AWS.</p>\n'
+                               '<p>They require a subscription to the service '
+                               'and your API access keys.</p>\n'
+                               '<p>The modules currently support Active '
+                               'Directory, Pool, FileSystem (Volume), and '
+                               'Snapshot services.</p>\n'
+                               '<h1>Release Notes</h1>\n'
+                               '<h2>20.2.0</h2>\n'
+                               '<h3>Bug Fixes</h3>\n'
+                               '<ul>\n'
+                               '<li>galaxy.yml: fix path to github '
+                               'repository.</li>\n'
+                               '</ul>\n'
+                               '<h2>19.11.0</h2>\n'
+                               '<ul>\n'
+                               '<li>Initial release as a collection.</li>\n'
+                               '</ul>',
+                       'name': 'README.md'},
+ 'contents': [{'content_name': 'aws_netapp_cvs_pool',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': 'NetApp Ansible Team '
+                                                 '(@carchi8py) '
+                                                 '<ng-ansibleteam@netapp.com>',
+                                       'description': ['Create, Update, Delete '
+                                                       'Pool on AWS Cloud '
+                                                       'Volumes Service.'],
+                                       'filename': '/tmp/tmpmlq9awk8/ansible_collections/netapp/aws/plugins/modules/aws_netapp_cvs_pool.py',
+                                       'module': 'aws_netapp_cvs_pool',
+                                       'notes': ['The modules prefixed with '
+                                                 'aws\\_cvs\\_netapp are built '
+                                                 'to Manage AWS Cloud Volumes '
+                                                 'Service .'],
+                                       'options': [{'description': ['The '
+                                                                    'access '
+                                                                    'key to '
+                                                                    'authenticate '
+                                                                    'with the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'api_key',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The url '
+                                                                    'to the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'api_url',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['rename '
+                                                                    'the '
+                                                                    'existing '
+                                                                    'pool name '
+                                                                    '( The '
+                                                                    'human '
+                                                                    'readable '
+                                                                    'name of '
+                                                                    'the Pool '
+                                                                    ')',
+                                                                    'I(from_name) '
+                                                                    'is the '
+                                                                    'existing '
+                                                                    'name, and '
+                                                                    'I(name) '
+                                                                    'the new '
+                                                                    'name',
+                                                                    'can be '
+                                                                    'used with '
+                                                                    'update '
+                                                                    'operation'],
+                                                    'name': 'from_name',
+                                                    'type': 'str'},
+                                                   {'description': ['pool name '
+                                                                    '( The '
+                                                                    'human '
+                                                                    'readable '
+                                                                    'name of '
+                                                                    'the Pool '
+                                                                    ')',
+                                                                    'name can '
+                                                                    'be used '
+                                                                    'for '
+                                                                    'create, '
+                                                                    'update '
+                                                                    'and '
+                                                                    'delete '
+                                                                    'operations'],
+                                                    'name': 'name',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'region to '
+                                                                    'which the '
+                                                                    'Pool is '
+                                                                    'associated.'],
+                                                    'name': 'region',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'secret_key '
+                                                                    'to '
+                                                                    'authenticate '
+                                                                    'with the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'secret_key',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['basic',
+                                                                'standard',
+                                                                'extreme'],
+                                                    'description': ['The '
+                                                                    'service '
+                                                                    'level of '
+                                                                    'the Pool',
+                                                                    'can be '
+                                                                    'used with '
+                                                                    'pool '
+                                                                    'create, '
+                                                                    'update '
+                                                                    'operations'],
+                                                    'name': 'serviceLevel',
+                                                    'type': 'str'},
+                                                   {'description': ['Size of '
+                                                                    'the Pool '
+                                                                    'in bytes',
+                                                                    'can be '
+                                                                    'used with '
+                                                                    'pool '
+                                                                    'create, '
+                                                                    'update '
+                                                                    'operations',
+                                                                    'minimum '
+                                                                    'value is '
+                                                                    '4000000000000 '
+                                                                    'bytes'],
+                                                    'name': 'sizeInBytes',
+                                                    'type': 'int'},
+                                                   {'choices': ['present',
+                                                                'absent'],
+                                                    'description': ['Whether '
+                                                                    'the '
+                                                                    'specified '
+                                                                    'pool '
+                                                                    'should '
+                                                                    'exist or '
+                                                                    'not.'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'default': True,
+                                                    'description': ['Should '
+                                                                    'https '
+                                                                    'certificates '
+                                                                    'be '
+                                                                    'validated?'],
+                                                    'name': 'validate_certs',
+                                                    'required': False,
+                                                    'type': 'bool'},
+                                                   {'description': ['A vendor '
+                                                                    'ID for '
+                                                                    'the Pool. '
+                                                                    'E.g. an '
+                                                                    'ID '
+                                                                    'allocated '
+                                                                    'by a '
+                                                                    'vendor '
+                                                                    'service '
+                                                                    'for the '
+                                                                    'Pool.',
+                                                                    'can be '
+                                                                    'used with '
+                                                                    'pool '
+                                                                    'create, '
+                                                                    'update '
+                                                                    'operations',
+                                                                    'must be '
+                                                                    'unique'],
+                                                    'name': 'vendorID',
+                                                    'type': 'str'}],
+                                       'short_description': 'NetApp AWS Cloud '
+                                                            'Volumes Service '
+                                                            'Manage Pools.',
+                                       'version_added': '2.9'},
+                               'examples': '\n'
+                                           '- name: Create a new Pool\n'
+                                           '  aws_netapp_cvs_pool:\n'
+                                           '    state: present\n'
+                                           '    name: TestPoolBB12\n'
+                                           '    serviceLevel: extreme\n'
+                                           '    sizeInBytes: 4000000000000\n'
+                                           '    vendorID: '
+                                           'ansiblePoolTestVendorBB12\n'
+                                           '    region: us-east-1\n'
+                                           '    api_url: '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '    api_key: MyAPiKey\n'
+                                           '    secret_key: MySecretKey\n'
+                                           '\n'
+                                           '- name: Delete a Pool\n'
+                                           '  aws_netapp_cvs_pool:\n'
+                                           '    state: absent\n'
+                                           '    name: TestPoolBB7\n'
+                                           '    region: us-east-1\n'
+                                           '    api_url: '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '    api_key: MyAPiKey\n'
+                                           '    secret_key: MySecretKey\n'
+                                           '\n'
+                                           '- name: Update a Pool\n'
+                                           '  aws_netapp_cvs_pool:\n'
+                                           '    state: present\n'
+                                           '    from_name: TestPoolBB12\n'
+                                           '    name: Mynewpool7\n'
+                                           '    vendorID: '
+                                           'ansibleVendorMynewpool15\n'
+                                           '    serviceLevel: extreme\n'
+                                           '    sizeInBytes: 4000000000000\n'
+                                           '    region: us-east-1\n'
+                                           '    api_url: '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '    api_key: MyAPiKey\n'
+                                           '    secret_key: MySecretKey\n'
+                                           '\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'aws_netapp_cvs_snapshots',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': 'NetApp Ansible Team '
+                                                 '(@carchi8py) '
+                                                 '<ng-ansibleteam@netapp.com>',
+                                       'description': ['Create, Update, Delete '
+                                                       'Snapshot on AWS Cloud '
+                                                       'Volumes Service.'],
+                                       'filename': '/tmp/tmpmlq9awk8/ansible_collections/netapp/aws/plugins/modules/aws_netapp_cvs_snapshots.py',
+                                       'module': 'aws_netapp_cvs_snapshots',
+                                       'notes': ['The modules prefixed with '
+                                                 'aws\\_cvs\\_netapp are built '
+                                                 'to Manage AWS Cloud Volumes '
+                                                 'Service .'],
+                                       'options': [{'description': ['The '
+                                                                    'access '
+                                                                    'key to '
+                                                                    'authenticate '
+                                                                    'with the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'api_key',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The url '
+                                                                    'to the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'api_url',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Name or '
+                                                                    'Id of the '
+                                                                    'filesystem.',
+                                                                    'Required '
+                                                                    'for '
+                                                                    'create '
+                                                                    'operation'],
+                                                    'name': 'fileSystemId',
+                                                    'type': 'str'},
+                                                   {'description': ['ID or '
+                                                                    'Name of '
+                                                                    'the '
+                                                                    'snapshot '
+                                                                    'to '
+                                                                    'rename.',
+                                                                    'Required '
+                                                                    'to create '
+                                                                    'an '
+                                                                    'snapshot '
+                                                                    'called '
+                                                                    "'name' by "
+                                                                    'renaming '
+                                                                    "'from_name'."],
+                                                    'name': 'from_name',
+                                                    'type': 'str'},
+                                                   {'description': ['Name of '
+                                                                    'the '
+                                                                    'snapshot'],
+                                                    'name': 'name',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'region to '
+                                                                    'which the '
+                                                                    'snapshot '
+                                                                    'belongs '
+                                                                    'to.'],
+                                                    'name': 'region',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'secret_key '
+                                                                    'to '
+                                                                    'authenticate '
+                                                                    'with the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'secret_key',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['present',
+                                                                'absent'],
+                                                    'description': ['Whether '
+                                                                    'the '
+                                                                    'specified '
+                                                                    'snapshot '
+                                                                    'should '
+                                                                    'exist or '
+                                                                    'not.'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'default': True,
+                                                    'description': ['Should '
+                                                                    'https '
+                                                                    'certificates '
+                                                                    'be '
+                                                                    'validated?'],
+                                                    'name': 'validate_certs',
+                                                    'required': False,
+                                                    'type': 'bool'}],
+                                       'short_description': 'NetApp AWS Cloud '
+                                                            'Volumes Service '
+                                                            'Manage Snapshots.',
+                                       'version_added': '2.9'},
+                               'examples': '\n'
+                                           '- name: Create Snapshot\n'
+                                           '  aws_netapp_cvs_snapshots:\n'
+                                           '    state: present\n'
+                                           '    region: us-east-1\n'
+                                           '    name: testSnapshot\n'
+                                           '    fileSystemId: testVolume\n'
+                                           '    api_url : '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '    api_key: myApiKey\n'
+                                           '    secret_key : mySecretKey\n'
+                                           '\n'
+                                           '- name: Update Snapshot\n'
+                                           '  aws_netapp_cvs_snapshots:\n'
+                                           '    state: present\n'
+                                           '    region: us-east-1\n'
+                                           '    name: testSnapshot - renamed\n'
+                                           '    from_name: testSnapshot\n'
+                                           '    fileSystemId: testVolume\n'
+                                           '    api_url : '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '    api_key: myApiKey\n'
+                                           '    secret_key : mySecretKey\n'
+                                           '\n'
+                                           '- name: Delete Snapshot\n'
+                                           '  aws_netapp_cvs_snapshots:\n'
+                                           '    state: absent\n'
+                                           '    region: us-east-1\n'
+                                           '    name: testSnapshot\n'
+                                           '    api_url : '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '    api_key: myApiKey\n'
+                                           '    secret_key : mySecretKey\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'aws_netapp_cvs_active_directory',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': 'NetApp Ansible Team '
+                                                 '(@carchi8py) '
+                                                 '<ng-ansibleteam@netapp.com>',
+                                       'description': ['Create, Update, Delete '
+                                                       'ActiveDirectory on AWS '
+                                                       'Cloud Volumes '
+                                                       'Service.'],
+                                       'filename': '/tmp/tmpmlq9awk8/ansible_collections/netapp/aws/plugins/modules/aws_netapp_cvs_active_directory.py',
+                                       'module': 'aws_netapp_cvs_active_directory',
+                                       'notes': ['The modules prefixed with '
+                                                 'aws\\_cvs\\_netapp are built '
+                                                 'to Manage AWS Cloud Volumes '
+                                                 'Service .'],
+                                       'options': [{'description': ['DNS '
+                                                                    'server '
+                                                                    'address '
+                                                                    'for the '
+                                                                    'Active '
+                                                                    'Directory '
+                                                                    'domain',
+                                                                    'Required '
+                                                                    'when '
+                                                                    'C(state=present)',
+                                                                    'Required '
+                                                                    'when '
+                                                                    'C(state=present), '
+                                                                    'to modify '
+                                                                    'ActiveDirectory '
+                                                                    'properties.'],
+                                                    'name': 'DNS',
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'access '
+                                                                    'key to '
+                                                                    'authenticate '
+                                                                    'with the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'api_key',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The url '
+                                                                    'to the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'api_url',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Name of '
+                                                                    'the '
+                                                                    'Active '
+                                                                    'Directory '
+                                                                    'domain'],
+                                                    'name': 'domain',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['NetBIOS '
+                                                                    'name of '
+                                                                    'the '
+                                                                    'server.'],
+                                                    'name': 'netBIOS',
+                                                    'type': 'str'},
+                                                   {'description': ['Password '
+                                                                    'of the '
+                                                                    'Active '
+                                                                    'Directory '
+                                                                    'domain '
+                                                                    'administrator',
+                                                                    'Required '
+                                                                    'when '
+                                                                    'C(state=present), '
+                                                                    'to modify '
+                                                                    'ActiveDirectory '
+                                                                    'properties'],
+                                                    'name': 'password',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'region to '
+                                                                    'which the '
+                                                                    'Active '
+                                                                    'Directory '
+                                                                    'credentials '
+                                                                    'are '
+                                                                    'associated.'],
+                                                    'name': 'region',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'secret_key '
+                                                                    'to '
+                                                                    'authenticate '
+                                                                    'with the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'secret_key',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['present',
+                                                                'absent'],
+                                                    'description': ['Whether '
+                                                                    'the '
+                                                                    'specified '
+                                                                    'ActiveDirectory '
+                                                                    'should '
+                                                                    'exist or '
+                                                                    'not.'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Username '
+                                                                    'of the '
+                                                                    'Active '
+                                                                    'Directory '
+                                                                    'domain '
+                                                                    'administrator'],
+                                                    'name': 'username',
+                                                    'type': 'str'},
+                                                   {'default': True,
+                                                    'description': ['Should '
+                                                                    'https '
+                                                                    'certificates '
+                                                                    'be '
+                                                                    'validated?'],
+                                                    'name': 'validate_certs',
+                                                    'required': False,
+                                                    'type': 'bool'}],
+                                       'short_description': 'NetApp AWS '
+                                                            'CloudVolumes '
+                                                            'Service Manage '
+                                                            'Active Directory.',
+                                       'version_added': '2.9'},
+                               'examples': '\n'
+                                           '    - name: Create Active '
+                                           'Directory\n'
+                                           '      '
+                                           'aws_netapp_cvs_active_directory.py:\n'
+                                           '        state: present\n'
+                                           '        region: us-east-1\n'
+                                           '        DNS: 101.102.103.123\n'
+                                           '        domain: mydomain.com\n'
+                                           '        password: netapp1!\n'
+                                           '        netBIOS: testing\n'
+                                           '        username: user1\n'
+                                           '        api_url : My_CVS_Hostname\n'
+                                           '        api_key: My_API_Key\n'
+                                           '        secret_key : '
+                                           'My_Secret_Key\n'
+                                           '\n'
+                                           '    - name: Update Active '
+                                           'Directory\n'
+                                           '      '
+                                           'aws_netapp_cvs_active_directory.py:\n'
+                                           '        state: present\n'
+                                           '        region: us-east-1\n'
+                                           '        DNS: 101.102.103.123\n'
+                                           '        domain: mydomain.com\n'
+                                           '        password: netapp2!\n'
+                                           '        netBIOS: testingBIOS\n'
+                                           '        username: user2\n'
+                                           '        api_url : My_CVS_Hostname\n'
+                                           '        api_key: My_API_Key\n'
+                                           '        secret_key : '
+                                           'My_Secret_Key\n'
+                                           '\n'
+                                           '    - name: Delete Active '
+                                           'Directory\n'
+                                           '      '
+                                           'aws_netapp_cvs_active_directory.py:\n'
+                                           '        state: absent\n'
+                                           '        region: us-east-1\n'
+                                           '        domain: mydomain.com\n'
+                                           '        api_url : My_CVS_Hostname\n'
+                                           '        api_key: My_API_Key\n'
+                                           '        secret_key : '
+                                           'My_Secret_Key\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'certified'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'aws_netapp_cvs_filesystems',
+               'content_type': 'module',
+               'doc_strings': {'doc': {'author': 'NetApp Ansible Team '
+                                                 '(@carchi8py) '
+                                                 '<ng-ansibleteam@netapp.com>',
+                                       'description': ['Create, Update, Delete '
+                                                       'fileSystem on AWS '
+                                                       'Cloud Volumes '
+                                                       'Service.'],
+                                       'filename': '/tmp/tmpmlq9awk8/ansible_collections/netapp/aws/plugins/modules/aws_netapp_cvs_filesystems.py',
+                                       'module': 'aws_netapp_cvs_filesystems',
+                                       'notes': ['The modules prefixed with '
+                                                 'aws\\_cvs\\_netapp are built '
+                                                 'to Manage AWS Cloud Volumes '
+                                                 'Service .'],
+                                       'options': [{'description': ['The '
+                                                                    'access '
+                                                                    'key to '
+                                                                    'authenticate '
+                                                                    'with the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'api_key',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The url '
+                                                                    'to the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'api_url',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['Name of '
+                                                                    'the '
+                                                                    'filesystem'],
+                                                    'name': 'creationToken',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'policy '
+                                                                    'rules to '
+                                                                    'export '
+                                                                    'the '
+                                                                    'filesystem'],
+                                                    'name': 'exportPolicy',
+                                                    'suboptions': [{'description': ['Set '
+                                                                                    'of '
+                                                                                    'rules '
+                                                                                    'to '
+                                                                                    'export '
+                                                                                    'the '
+                                                                                    'filesystem',
+                                                                                    'Requires '
+                                                                                    'allowedClients, '
+                                                                                    'access '
+                                                                                    'and '
+                                                                                    'protocol'],
+                                                                    'name': 'rules',
+                                                                    'suboptions': [{'description': ['Comma '
+                                                                                                    'separated '
+                                                                                                    'list '
+                                                                                                    'of '
+                                                                                                    'ip '
+                                                                                                    'address '
+                                                                                                    'blocks '
+                                                                                                    'of '
+                                                                                                    'the '
+                                                                                                    'clients '
+                                                                                                    'to '
+                                                                                                    'access '
+                                                                                                    'the '
+                                                                                                    'fileSystem',
+                                                                                                    'Each '
+                                                                                                    'address '
+                                                                                                    'block '
+                                                                                                    'contains '
+                                                                                                    'the '
+                                                                                                    'starting '
+                                                                                                    'IP '
+                                                                                                    'address '
+                                                                                                    'and '
+                                                                                                    'size '
+                                                                                                    'for '
+                                                                                                    'the '
+                                                                                                    'block'],
+                                                                                    'name': 'allowedClients',
+                                                                                    'type': 'str'},
+                                                                                   {'description': ['Enable '
+                                                                                                    'or '
+                                                                                                    'disable '
+                                                                                                    'cifs '
+                                                                                                    'filesystem'],
+                                                                                    'name': 'cifs',
+                                                                                    'type': 'bool'},
+                                                                                   {'description': ['Enable '
+                                                                                                    'or '
+                                                                                                    'disable '
+                                                                                                    'nfsv3 '
+                                                                                                    'fileSystem'],
+                                                                                    'name': 'nfsv3',
+                                                                                    'type': 'bool'},
+                                                                                   {'description': ['Enable '
+                                                                                                    'or '
+                                                                                                    'disable '
+                                                                                                    'nfsv4 '
+                                                                                                    'filesystem'],
+                                                                                    'name': 'nfsv4',
+                                                                                    'type': 'bool'},
+                                                                                   {'description': ['Index '
+                                                                                                    'number '
+                                                                                                    'of '
+                                                                                                    'the '
+                                                                                                    'rule'],
+                                                                                    'name': 'ruleIndex',
+                                                                                    'type': 'int'},
+                                                                                   {'description': ['Should '
+                                                                                                    'fileSystem '
+                                                                                                    'have '
+                                                                                                    'read '
+                                                                                                    'only '
+                                                                                                    'permission '
+                                                                                                    'or '
+                                                                                                    'not'],
+                                                                                    'name': 'unixReadOnly',
+                                                                                    'type': 'bool'},
+                                                                                   {'description': ['Should '
+                                                                                                    'fileSystem '
+                                                                                                    'have '
+                                                                                                    'read '
+                                                                                                    'write '
+                                                                                                    'permission '
+                                                                                                    'or '
+                                                                                                    'not'],
+                                                                                    'name': 'unixReadWrite',
+                                                                                    'type': 'bool'}],
+                                                                    'type': 'list'}],
+                                                    'type': 'dict'},
+                                                   {'description': ['Size of '
+                                                                    'the '
+                                                                    'filesystem',
+                                                                    'Required '
+                                                                    'for '
+                                                                    'create'],
+                                                    'name': 'quotaInBytes',
+                                                    'type': 'int'},
+                                                   {'description': ['The '
+                                                                    'region to '
+                                                                    'which the '
+                                                                    'filesystem '
+                                                                    'belongs '
+                                                                    'to.'],
+                                                    'name': 'region',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'description': ['The '
+                                                                    'secret_key '
+                                                                    'to '
+                                                                    'authenticate '
+                                                                    'with the '
+                                                                    'AWSCVS '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'Proxy or '
+                                                                    'Embedded '
+                                                                    'Web '
+                                                                    'Services '
+                                                                    'API.'],
+                                                    'name': 'secret_key',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'choices': ['standard',
+                                                                'premium',
+                                                                'extreme'],
+                                                    'description': ['Service '
+                                                                    'Level of '
+                                                                    'a '
+                                                                    'filesystem.'],
+                                                    'name': 'serviceLevel',
+                                                    'type': 'str'},
+                                                   {'choices': ['present',
+                                                                'absent'],
+                                                    'description': ['Whether '
+                                                                    'the '
+                                                                    'specified '
+                                                                    'fileSystem '
+                                                                    'should '
+                                                                    'exist or '
+                                                                    'not.'],
+                                                    'name': 'state',
+                                                    'required': True,
+                                                    'type': 'str'},
+                                                   {'default': True,
+                                                    'description': ['Should '
+                                                                    'https '
+                                                                    'certificates '
+                                                                    'be '
+                                                                    'validated?'],
+                                                    'name': 'validate_certs',
+                                                    'required': False,
+                                                    'type': 'bool'}],
+                                       'short_description': 'NetApp AWS Cloud '
+                                                            'Volumes Service '
+                                                            'Manage '
+                                                            'FileSystem.',
+                                       'version_added': '2.9'},
+                               'examples': '\n'
+                                           '- name: Create FileSystem\n'
+                                           '  aws_netapp_cvs_filesystems:\n'
+                                           '    state: present\n'
+                                           '    region: us-east-1\n'
+                                           '    creationToken: newVolume-1\n'
+                                           '    exportPolicy:\n'
+                                           '        rules:\n'
+                                           '          - allowedClients: '
+                                           '172.16.0.4\n'
+                                           '            cifs: False\n'
+                                           '            nfsv3: True\n'
+                                           '            nfsv4: True\n'
+                                           '            ruleIndex: 1\n'
+                                           '            unixReadOnly: True\n'
+                                           '            unixReadWrite: False\n'
+                                           '    quotaInBytes: 100000000000\n'
+                                           '    api_url : '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '    api_key: '
+                                           'Q1ZRR0p0VGNuZ3VhMnJBYk5zczM1RkZ3Z0lCbUE3\n'
+                                           '    secret_key : '
+                                           'U1FwdHdKSGRQQUhIdkIwMktMU1ZCV2x6WUowZWRD\n'
+                                           '\n'
+                                           '- name: Update FileSystem\n'
+                                           '  aws_netapp_cvs_filesystems:\n'
+                                           '     state: present\n'
+                                           '     region: us-east-1\n'
+                                           '     creationToken: newVolume-1\n'
+                                           '     exportPolicy:\n'
+                                           '         rules:\n'
+                                           '           - allowedClients: '
+                                           '172.16.0.4\n'
+                                           '             cifs: False\n'
+                                           '             nfsv3: True\n'
+                                           '             nfsv4: True\n'
+                                           '             ruleIndex: 1\n'
+                                           '             unixReadOnly: True\n'
+                                           '             unixReadWrite: False\n'
+                                           '     quotaInBytes: 200000000000\n'
+                                           '     api_url : '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '     api_key: '
+                                           'Q1ZRR0p0VGNuZ3VhMnJBYk5zczM1RkZ3Z0lCbUE3\n'
+                                           '     secret_key : '
+                                           'U1FwdHdKSGRQQUhIdkIwMktMU1ZCV2x6WUowZWRD\n'
+                                           '\n'
+                                           '- name: Delete FileSystem\n'
+                                           '  aws_netapp_cvs_filesystems:\n'
+                                           '     state: present\n'
+                                           '     region: us-east-1\n'
+                                           '     creationToken: newVolume-1\n'
+                                           '     quotaInBytes: 100000000000\n'
+                                           '     api_url : '
+                                           'cds-aws-bundles.netapp.com\n'
+                                           '     api_key: '
+                                           'Q1ZRR0p0VGNuZ3VhMnJBYk5zczM1RkZ3Z0lCbUE3\n'
+                                           '     secret_key : '
+                                           'U1FwdHdKSGRQQUhIdkIwMktMU1ZCV2x6WUowZWRD\n',
+                               'metadata': {'status': ['preview'],
+                                            'supported_by': 'community'},
+                               'return': None},
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'netapp_module',
+               'content_type': 'module_utils',
+               'doc_strings': None,
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'netapp',
+               'content_type': 'module_utils',
+               'doc_strings': None,
+               'readme_file': None,
+               'readme_html': None},
+              {'content_name': 'netapp',
+               'content_type': 'doc_fragments',
+               'doc_strings': None,
+               'readme_file': None,
+               'readme_html': None}],
+ 'documentation_files': []}
+</pre>
+
+<pre>
+{
+    "collection_readme": {
+        "html": "\u003cp\u003e=============================================================\u003c/p\u003e\n\u003cp\u003enetapp.aws                                                   \u003c/p\u003e\n\u003cp\u003eNetApp AWS CVS Collection                                    \u003c/p\u003e\n\u003cp\u003eCopyright (c) 2019 NetApp, Inc. All rights reserved.       \u003cbr\u003e\nSpecifications subject to change without notice.             \u003c/p\u003e\n\u003cp\u003e=============================================================\u003c/p\u003e\n\u003ch1\u003eInstallation\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003eansible-galaxy collection install netapp.aws\n\u003c/code\u003e\u003c/pre\u003e\n\n\u003cp\u003eTo use Collection add the following to the top of your playbook, with out this you will be using Ansible 2.9 version of the module\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ecollections:\n  - netapp.aws\n\u003c/code\u003e\u003c/pre\u003e\n\n\u003ch1\u003eNeed help\u003c/h1\u003e\n\u003cp\u003eJoin our Slack Channel at \u003ca href=\"http://netapp.io/slack\"\u003eNetapp.io\u003c/a\u003e\u003c/p\u003e\n\u003ch1\u003eNotes\u003c/h1\u003e\n\u003cp\u003eThese Ansible modules are supporting NetApp Cloud Volumes Service for AWS.\u003c/p\u003e\n\u003cp\u003eThey require a subscription to the service and your API access keys.\u003c/p\u003e\n\u003cp\u003eThe modules currently support Active Directory, Pool, FileSystem (Volume), and Snapshot services.\u003c/p\u003e\n\u003ch1\u003eRelease Notes\u003c/h1\u003e\n\u003ch2\u003e20.2.0\u003c/h2\u003e\n\u003ch3\u003eBug Fixes\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003egalaxy.yml: fix path to github repository.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003e19.11.0\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eInitial release as a collection.\u003c/li\u003e\n\u003c/ul\u003e",
+        "name": "README.md"
+    },
+    "contents": [
+        {
+            "content_name": "aws_netapp_cvs_pool",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": "NetApp Ansible Team (@carchi8py) \u003cng-ansibleteam@netapp.com\u003e",
+                    "description": [
+                        "Create, Update, Delete Pool on AWS Cloud Volumes Service."
+                    ],
+                    "filename": "/tmp/tmpmlq9awk8/ansible_collections/netapp/aws/plugins/modules/aws_netapp_cvs_pool.py",
+                    "module": "aws_netapp_cvs_pool",
+                    "notes": [
+                        "The modules prefixed with aws\\_cvs\\_netapp are built to Manage AWS Cloud Volumes Service ."
+                    ],
+                    "options": [
+                        {
+                            "description": [
+                                "The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "api_key",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The url to the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "api_url",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "rename the existing pool name ( The human readable name of the Pool )",
+                                "I(from_name) is the existing name, and I(name) the new name",
+                                "can be used with update operation"
+                            ],
+                            "name": "from_name",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "pool name ( The human readable name of the Pool )",
+                                "name can be used for create, update and delete operations"
+                            ],
+                            "name": "name",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The region to which the Pool is associated."
+                            ],
+                            "name": "region",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "secret_key",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "basic",
+                                "standard",
+                                "extreme"
+                            ],
+                            "description": [
+                                "The service level of the Pool",
+                                "can be used with pool create, update operations"
+                            ],
+                            "name": "serviceLevel",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Size of the Pool in bytes",
+                                "can be used with pool create, update operations",
+                                "minimum value is 4000000000000 bytes"
+                            ],
+                            "name": "sizeInBytes",
+                            "type": "int"
+                        },
+                        {
+                            "choices": [
+                                "present",
+                                "absent"
+                            ],
+                            "description": [
+                                "Whether the specified pool should exist or not."
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "default": true,
+                            "description": [
+                                "Should https certificates be validated?"
+                            ],
+                            "name": "validate_certs",
+                            "required": false,
+                            "type": "bool"
+                        },
+                        {
+                            "description": [
+                                "A vendor ID for the Pool. E.g. an ID allocated by a vendor service for the Pool.",
+                                "can be used with pool create, update operations",
+                                "must be unique"
+                            ],
+                            "name": "vendorID",
+                            "type": "str"
+                        }
+                    ],
+                    "short_description": "NetApp AWS Cloud Volumes Service Manage Pools.",
+                    "version_added": "2.9"
+                },
+                "examples": "\n- name: Create a new Pool\n  aws_netapp_cvs_pool:\n    state: present\n    name: TestPoolBB12\n    serviceLevel: extreme\n    sizeInBytes: 4000000000000\n    vendorID: ansiblePoolTestVendorBB12\n    region: us-east-1\n    api_url: cds-aws-bundles.netapp.com\n    api_key: MyAPiKey\n    secret_key: MySecretKey\n\n- name: Delete a Pool\n  aws_netapp_cvs_pool:\n    state: absent\n    name: TestPoolBB7\n    region: us-east-1\n    api_url: cds-aws-bundles.netapp.com\n    api_key: MyAPiKey\n    secret_key: MySecretKey\n\n- name: Update a Pool\n  aws_netapp_cvs_pool:\n    state: present\n    from_name: TestPoolBB12\n    name: Mynewpool7\n    vendorID: ansibleVendorMynewpool15\n    serviceLevel: extreme\n    sizeInBytes: 4000000000000\n    region: us-east-1\n    api_url: cds-aws-bundles.netapp.com\n    api_key: MyAPiKey\n    secret_key: MySecretKey\n\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "aws_netapp_cvs_snapshots",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": "NetApp Ansible Team (@carchi8py) \u003cng-ansibleteam@netapp.com\u003e",
+                    "description": [
+                        "Create, Update, Delete Snapshot on AWS Cloud Volumes Service."
+                    ],
+                    "filename": "/tmp/tmpmlq9awk8/ansible_collections/netapp/aws/plugins/modules/aws_netapp_cvs_snapshots.py",
+                    "module": "aws_netapp_cvs_snapshots",
+                    "notes": [
+                        "The modules prefixed with aws\\_cvs\\_netapp are built to Manage AWS Cloud Volumes Service ."
+                    ],
+                    "options": [
+                        {
+                            "description": [
+                                "The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "api_key",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The url to the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "api_url",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Name or Id of the filesystem.",
+                                "Required for create operation"
+                            ],
+                            "name": "fileSystemId",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "ID or Name of the snapshot to rename.",
+                                "Required to create an snapshot called \u0027name\u0027 by renaming \u0027from_name\u0027."
+                            ],
+                            "name": "from_name",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Name of the snapshot"
+                            ],
+                            "name": "name",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The region to which the snapshot belongs to."
+                            ],
+                            "name": "region",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "secret_key",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "present",
+                                "absent"
+                            ],
+                            "description": [
+                                "Whether the specified snapshot should exist or not."
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "default": true,
+                            "description": [
+                                "Should https certificates be validated?"
+                            ],
+                            "name": "validate_certs",
+                            "required": false,
+                            "type": "bool"
+                        }
+                    ],
+                    "short_description": "NetApp AWS Cloud Volumes Service Manage Snapshots.",
+                    "version_added": "2.9"
+                },
+                "examples": "\n- name: Create Snapshot\n  aws_netapp_cvs_snapshots:\n    state: present\n    region: us-east-1\n    name: testSnapshot\n    fileSystemId: testVolume\n    api_url : cds-aws-bundles.netapp.com\n    api_key: myApiKey\n    secret_key : mySecretKey\n\n- name: Update Snapshot\n  aws_netapp_cvs_snapshots:\n    state: present\n    region: us-east-1\n    name: testSnapshot - renamed\n    from_name: testSnapshot\n    fileSystemId: testVolume\n    api_url : cds-aws-bundles.netapp.com\n    api_key: myApiKey\n    secret_key : mySecretKey\n\n- name: Delete Snapshot\n  aws_netapp_cvs_snapshots:\n    state: absent\n    region: us-east-1\n    name: testSnapshot\n    api_url : cds-aws-bundles.netapp.com\n    api_key: myApiKey\n    secret_key : mySecretKey\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "aws_netapp_cvs_active_directory",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": "NetApp Ansible Team (@carchi8py) \u003cng-ansibleteam@netapp.com\u003e",
+                    "description": [
+                        "Create, Update, Delete ActiveDirectory on AWS Cloud Volumes Service."
+                    ],
+                    "filename": "/tmp/tmpmlq9awk8/ansible_collections/netapp/aws/plugins/modules/aws_netapp_cvs_active_directory.py",
+                    "module": "aws_netapp_cvs_active_directory",
+                    "notes": [
+                        "The modules prefixed with aws\\_cvs\\_netapp are built to Manage AWS Cloud Volumes Service ."
+                    ],
+                    "options": [
+                        {
+                            "description": [
+                                "DNS server address for the Active Directory domain",
+                                "Required when C(state=present)",
+                                "Required when C(state=present), to modify ActiveDirectory properties."
+                            ],
+                            "name": "DNS",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "api_key",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The url to the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "api_url",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Name of the Active Directory domain"
+                            ],
+                            "name": "domain",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "NetBIOS name of the server."
+                            ],
+                            "name": "netBIOS",
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Password of the Active Directory domain administrator",
+                                "Required when C(state=present), to modify ActiveDirectory properties"
+                            ],
+                            "name": "password",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The region to which the Active Directory credentials are associated."
+                            ],
+                            "name": "region",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "secret_key",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "present",
+                                "absent"
+                            ],
+                            "description": [
+                                "Whether the specified ActiveDirectory should exist or not."
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Username of the Active Directory domain administrator"
+                            ],
+                            "name": "username",
+                            "type": "str"
+                        },
+                        {
+                            "default": true,
+                            "description": [
+                                "Should https certificates be validated?"
+                            ],
+                            "name": "validate_certs",
+                            "required": false,
+                            "type": "bool"
+                        }
+                    ],
+                    "short_description": "NetApp AWS CloudVolumes Service Manage Active Directory.",
+                    "version_added": "2.9"
+                },
+                "examples": "\n    - name: Create Active Directory\n      aws_netapp_cvs_active_directory.py:\n        state: present\n        region: us-east-1\n        DNS: 101.102.103.123\n        domain: mydomain.com\n        password: netapp1!\n        netBIOS: testing\n        username: user1\n        api_url : My_CVS_Hostname\n        api_key: My_API_Key\n        secret_key : My_Secret_Key\n\n    - name: Update Active Directory\n      aws_netapp_cvs_active_directory.py:\n        state: present\n        region: us-east-1\n        DNS: 101.102.103.123\n        domain: mydomain.com\n        password: netapp2!\n        netBIOS: testingBIOS\n        username: user2\n        api_url : My_CVS_Hostname\n        api_key: My_API_Key\n        secret_key : My_Secret_Key\n\n    - name: Delete Active Directory\n      aws_netapp_cvs_active_directory.py:\n        state: absent\n        region: us-east-1\n        domain: mydomain.com\n        api_url : My_CVS_Hostname\n        api_key: My_API_Key\n        secret_key : My_Secret_Key\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "certified"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "aws_netapp_cvs_filesystems",
+            "content_type": "module",
+            "doc_strings": {
+                "doc": {
+                    "author": "NetApp Ansible Team (@carchi8py) \u003cng-ansibleteam@netapp.com\u003e",
+                    "description": [
+                        "Create, Update, Delete fileSystem on AWS Cloud Volumes Service."
+                    ],
+                    "filename": "/tmp/tmpmlq9awk8/ansible_collections/netapp/aws/plugins/modules/aws_netapp_cvs_filesystems.py",
+                    "module": "aws_netapp_cvs_filesystems",
+                    "notes": [
+                        "The modules prefixed with aws\\_cvs\\_netapp are built to Manage AWS Cloud Volumes Service ."
+                    ],
+                    "options": [
+                        {
+                            "description": [
+                                "The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "api_key",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The url to the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "api_url",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "Name of the filesystem"
+                            ],
+                            "name": "creationToken",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The policy rules to export the filesystem"
+                            ],
+                            "name": "exportPolicy",
+                            "suboptions": [
+                                {
+                                    "description": [
+                                        "Set of rules to export the filesystem",
+                                        "Requires allowedClients, access and protocol"
+                                    ],
+                                    "name": "rules",
+                                    "suboptions": [
+                                        {
+                                            "description": [
+                                                "Comma separated list of ip address blocks of the clients to access the fileSystem",
+                                                "Each address block contains the starting IP address and size for the block"
+                                            ],
+                                            "name": "allowedClients",
+                                            "type": "str"
+                                        },
+                                        {
+                                            "description": [
+                                                "Enable or disable cifs filesystem"
+                                            ],
+                                            "name": "cifs",
+                                            "type": "bool"
+                                        },
+                                        {
+                                            "description": [
+                                                "Enable or disable nfsv3 fileSystem"
+                                            ],
+                                            "name": "nfsv3",
+                                            "type": "bool"
+                                        },
+                                        {
+                                            "description": [
+                                                "Enable or disable nfsv4 filesystem"
+                                            ],
+                                            "name": "nfsv4",
+                                            "type": "bool"
+                                        },
+                                        {
+                                            "description": [
+                                                "Index number of the rule"
+                                            ],
+                                            "name": "ruleIndex",
+                                            "type": "int"
+                                        },
+                                        {
+                                            "description": [
+                                                "Should fileSystem have read only permission or not"
+                                            ],
+                                            "name": "unixReadOnly",
+                                            "type": "bool"
+                                        },
+                                        {
+                                            "description": [
+                                                "Should fileSystem have read write permission or not"
+                                            ],
+                                            "name": "unixReadWrite",
+                                            "type": "bool"
+                                        }
+                                    ],
+                                    "type": "list"
+                                }
+                            ],
+                            "type": "dict"
+                        },
+                        {
+                            "description": [
+                                "Size of the filesystem",
+                                "Required for create"
+                            ],
+                            "name": "quotaInBytes",
+                            "type": "int"
+                        },
+                        {
+                            "description": [
+                                "The region to which the filesystem belongs to."
+                            ],
+                            "name": "region",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "description": [
+                                "The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API."
+                            ],
+                            "name": "secret_key",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "standard",
+                                "premium",
+                                "extreme"
+                            ],
+                            "description": [
+                                "Service Level of a filesystem."
+                            ],
+                            "name": "serviceLevel",
+                            "type": "str"
+                        },
+                        {
+                            "choices": [
+                                "present",
+                                "absent"
+                            ],
+                            "description": [
+                                "Whether the specified fileSystem should exist or not."
+                            ],
+                            "name": "state",
+                            "required": true,
+                            "type": "str"
+                        },
+                        {
+                            "default": true,
+                            "description": [
+                                "Should https certificates be validated?"
+                            ],
+                            "name": "validate_certs",
+                            "required": false,
+                            "type": "bool"
+                        }
+                    ],
+                    "short_description": "NetApp AWS Cloud Volumes Service Manage FileSystem.",
+                    "version_added": "2.9"
+                },
+                "examples": "\n- name: Create FileSystem\n  aws_netapp_cvs_filesystems:\n    state: present\n    region: us-east-1\n    creationToken: newVolume-1\n    exportPolicy:\n        rules:\n          - allowedClients: 172.16.0.4\n            cifs: False\n            nfsv3: True\n            nfsv4: True\n            ruleIndex: 1\n            unixReadOnly: True\n            unixReadWrite: False\n    quotaInBytes: 100000000000\n    api_url : cds-aws-bundles.netapp.com\n    api_key: Q1ZRR0p0VGNuZ3VhMnJBYk5zczM1RkZ3Z0lCbUE3\n    secret_key : U1FwdHdKSGRQQUhIdkIwMktMU1ZCV2x6WUowZWRD\n\n- name: Update FileSystem\n  aws_netapp_cvs_filesystems:\n     state: present\n     region: us-east-1\n     creationToken: newVolume-1\n     exportPolicy:\n         rules:\n           - allowedClients: 172.16.0.4\n             cifs: False\n             nfsv3: True\n             nfsv4: True\n             ruleIndex: 1\n             unixReadOnly: True\n             unixReadWrite: False\n     quotaInBytes: 200000000000\n     api_url : cds-aws-bundles.netapp.com\n     api_key: Q1ZRR0p0VGNuZ3VhMnJBYk5zczM1RkZ3Z0lCbUE3\n     secret_key : U1FwdHdKSGRQQUhIdkIwMktMU1ZCV2x6WUowZWRD\n\n- name: Delete FileSystem\n  aws_netapp_cvs_filesystems:\n     state: present\n     region: us-east-1\n     creationToken: newVolume-1\n     quotaInBytes: 100000000000\n     api_url : cds-aws-bundles.netapp.com\n     api_key: Q1ZRR0p0VGNuZ3VhMnJBYk5zczM1RkZ3Z0lCbUE3\n     secret_key : U1FwdHdKSGRQQUhIdkIwMktMU1ZCV2x6WUowZWRD\n",
+                "metadata": {
+                    "status": [
+                        "preview"
+                    ],
+                    "supported_by": "community"
+                },
+                "return": null
+            },
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "netapp_module",
+            "content_type": "module_utils",
+            "doc_strings": null,
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "netapp",
+            "content_type": "module_utils",
+            "doc_strings": null,
+            "readme_file": null,
+            "readme_html": null
+        },
+        {
+            "content_name": "netapp",
+            "content_type": "doc_fragments",
+            "doc_strings": null,
+            "readme_file": null,
+            "readme_html": null
+        }
+    ],
+    "documentation_files": []
+}
+</pre>
+
+
+</div>
+</div>
+    <div id="links"><!-- coleslaw start siblings template="<TemplateReference 'sibling_links.html.j2'>" -->
+<ul class="nav">
+
+    
+    
+    <li class="nav-item">
+    <a class="nav-link" href="index.json">index.json</a>
+    </li>
+
+</ul>
+<!-- coleslaw end siblings template="<TemplateReference 'sibling_links.html.j2'>" --></div>
+    <div id="footer">
+        
+    <!-- coleslaw start template "<TemplateReference 'javascript.html.j2'>" -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script>
+
+<!-- prism syntax highlighting -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<!-- coleslaw end template "<TemplateReference 'javascript.html.j2'>" -->
+
+    </div>
+</body>
+<!-- coleslaw end base-before-end-html template="<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
+</html>
+<!-- coleslaw end base template="<TemplateReference 'collection_version_docs_blob.html.j2'>" -->
